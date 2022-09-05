@@ -1,0 +1,47 @@
+server.port: 8080
+
+spring:
+  application:
+    name: "pizza-service"
+  cache:
+    jcache:
+      config: "classpath:ehcache.xml"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pizza_db
+    username: local
+    password: root
+  jpa:
+    database: postgresql
+    open-in-view: true
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQL95Dialect
+  sql:
+    init:
+      platform: postgresql
+      mode: embedded
+  artemis:
+    user: artemis
+    password: simetraehcapa
+
+logging.level.com.learners.pizzaservice: debug
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+app.config:
+  default-page: 0
+  default-size: 50
+  minimal-quantity: 10
+  quantity-to-deliver: 50
+  inventory-service-host: "http://localhost:8082"
+  inventory-path: "/api/v1/inventory/"
+  delivery-request-queue: "delivery-request"
+  new-inventory-queue: "inventory"
+  validate-order-queue: "validate-order"
+  validation-result-queue: "validation-result"
+
