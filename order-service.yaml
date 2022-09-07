@@ -19,10 +19,10 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/pizza_db
     username: local
-    password: {cipher}e37e7ff7fbb2a5bc0b27fdbc39132eb1479465cb0e7f75737f7240873b072888
+    password: "{cipher}e37e7ff7fbb2a5bc0b27fdbc39132eb1479465cb0e7f75737f7240873b072888"
   artemis:
     user: artemis
-    password: {cipher}64c46053ad698cc3297b0c03755aded5c74b4cf53ff1b7e7617bbecce1f439d7
+    password: "{cipher}64c46053ad698cc3297b0c03755aded5c74b4cf53ff1b7e7617bbecce1f439d7"
 
 logging.level.com.learners: debug
 
