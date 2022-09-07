@@ -2,8 +2,3 @@ spring:
   zipkin:
     baseUrl: 'http://localhost:9411/'
     enabled: true
-
-eureka:
-  client:
-    service-url:
-      defaultZone: "{cipher}b3b81bb5ee4b18bff4c85f8c842dea39c203a87a581d7b4b6d4f4a9d0853e0c41c46080e402f9c92aaad4487268142366ef1d9383439b156ac8b03be8a78a600"
